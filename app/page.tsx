@@ -1,90 +1,116 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex min-h-screen flex-col items-center justify-between p-8">
+      {/* Main */}
+      <main className="flex flex-col items-center justify-center flex-1 text-center">
+        <h1 className="text-4xl font-bold mb-4">
+          Bioinformatics & Clinical Metagenomics Analysis
+        </h1>
+        <p className="text-lg max-w-2xl mb-6">
+          An innovative platform by Dr. Elmira Davasaz T. integrating microbiome
+          analysis, mobile genetic elements, and novel bacterial species discovery
+          to advance chronic disease research and personalized therapeutic strategies.
+        </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        {/* Actions */}
+        <div className="flex gap-4 mb-8">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:your-email@example.com"
+            className="px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Contact Me
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://forms.gle/your-google-form-link" // Google Form linkini buraya koy
+            className="px-6 py-3 rounded-lg bg-green-600 text-white hover:bg-green-700 transition"
           >
-            Read our docs
+            Send Project
           </a>
         </div>
+
+        {/* Article Editing */}
+        <div className="max-w-xl p-6 border rounded-2xl shadow-md bg-gray-50 mb-8">
+          <h2 className="text-2xl font-semibold mb-2">Article Editing (Q1–Q2 Journals)</h2>
+          <p>
+            Professional article editing and consultancy for submissions to high-impact
+            Q1–Q2 journals in bioinformatics, microbiome, and clinical metagenomics.
+          </p>
+        </div>
+
+        {/* Bioinformatics image */}
+        <div className="mb-8">
+          <Image
+            src="/bioinfo.jpg"
+            alt="Bioinformatics & Clinical Metagenomics"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-md"
+            priority
+          />
+          <p className="mt-2 text-sm text-gray-600">
+            Clinical metagenomics in chronic disease research.
+          </p>
+        </div>
+
+        {/* Two smaller images side by side */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          <div>
+            <Image
+              src="/microbiome.jpg"
+              alt="Microbiome network visualization"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-md"
+            />
+            <p className="mt-2 text-sm text-gray-600 text-center">
+              Microbiome diversity and network analysis
+            </p>
+          </div>
+
+          <div>
+            <Image
+              src="/antibiotic.jpg"
+              alt="Antibiotic resistance illustration"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-md"
+            />
+            <p className="mt-2 text-sm text-gray-600 text-center">
+              Antibiotic resistance and clinical impact
+            </p>
+          </div>
+        </div>
+
+        {/* Publication image with DOI */}
+        <div className="mb-8">
+          <Image
+            src="/publication.jpg"
+            alt="Publication: Bioinformatic Strategies in Metagenomics of Chronic Prostatitis"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-md"
+          />
+          <p className="mt-2 text-[12px] text-gray-500 italic">
+            <a
+              href="https://doi.org/10.1007/s00345-025-05514-7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://doi.org/10.1007/s00345-025-05514-7
+            </a>
+          </p>
+        </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+
+      {/* Footer */}
+      <footer className="row-start-3 flex flex-col items-center justify-center mt-8 gap-2">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://your-website.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -95,8 +121,24 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          Bioinformatics & Clinical Metagenomics by Dr. Elmira Davasaz T. →
         </a>
+
+        {/* Contact details */}
+        <div className="flex flex-col items-center mt-4 text-sm text-gray-600">
+          <p>
+            Email:{" "}
+            <a href="mailto:your-email@example.com" className="underline">
+              your-elmira.dt@gmail.com
+            </a>
+          </p>
+          <p>
+            Phone:{" "}
+            <a href="tel:+905342699127" className="underline">
+              +90 5342699127
+            </a>
+          </p>
+        </div>
       </footer>
     </div>
   );
