@@ -1,8 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 
 export default function Home() {
+  const [showContact, setShowContact] = useState(false);
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-8">
       {/* Main */}
@@ -18,27 +21,59 @@ export default function Home() {
 
         {/* Actions */}
         <div className="flex gap-4 mb-8">
-          <a
-            href="mailto:your-email@example.com"
+          <button
+            onClick={() => setShowContact(true)}
             className="px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
           >
-            Contact Me
-          </a>
+            Contact Us
+          </button>
+
           <a
-            href="https://forms.gle/your-google-form-link" // Google Form linkini buraya koy
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe2NTzP2V5jyvIh-KGfQKTbt00Z_y9OJS2ZeUethUvsiFfITQ/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-3 rounded-lg bg-green-600 text-white hover:bg-green-700 transition"
           >
             Send Project
           </a>
         </div>
 
+        {/* Contact Modal */}
+        {showContact && (
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+            <div className="bg-white p-6 rounded-xl shadow-lg max-w-sm w-full text-center">
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">
+                Contact Us
+              </h2>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="mailto:elmira.dt@gmail.com"
+                  className="text-blue-600 underline"
+                >
+                  📧 elmira.dt@gmail.com
+                </a>
+                <a
+                  href="tel:+905342699127"
+                  className="text-blue-600 underline"
+                >
+                  📞 +90 534 269 91 27
+                </a>
+              </div>
+              <button
+                onClick={() => setShowContact(false)}
+                className="mt-6 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Article Editing */}
-        <div className="max-w-xl p-6 border rounded-2xl shadow-md bg-gray-50 mb-8">
-          <h2 className="text-2xl font-semibold mb-2">Article Editing (Q1–Q2 Journals)</h2>
-          <p>
-            Professional article editing and consultancy for submissions to high-impact
-            Q1–Q2 journals in bioinformatics, microbiome, and clinical metagenomics.
-          </p>
+        <div className="mt-6 text-gray-700 text-sm">
+          <strong>NOT:</strong> Professional article editing and consultancy for
+          submissions to high-impact Q1–Q2 journals in bioinformatics, microbiome,
+          and clinical metagenomics.
         </div>
 
         {/* Bioinformatics image */}
@@ -128,14 +163,14 @@ export default function Home() {
         <div className="flex flex-col items-center mt-4 text-sm text-gray-600">
           <p>
             Email:{" "}
-            <a href="mailto:your-email@example.com" className="underline">
-              your-elmira.dt@gmail.com
+            <a href="mailto:elmira.dt@gmail.com" className="underline">
+              elmira.dt@gmail.com
             </a>
           </p>
           <p>
             Phone:{" "}
             <a href="tel:+905342699127" className="underline">
-              +90 5342699127
+              +90 534 269 91 27
             </a>
           </p>
         </div>
