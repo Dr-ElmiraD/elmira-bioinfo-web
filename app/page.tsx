@@ -85,7 +85,7 @@ export default function Home() {
             src="/bioinfo.jpg"
             alt="Bioinformatics & Clinical Metagenomics"
             width={450}   // küçültüldü
-            height={300}
+            height={200}
             className="rounded-lg shadow-md"
             priority
           />
