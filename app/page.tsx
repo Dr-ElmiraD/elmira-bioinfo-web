@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div
-      className="flex min-h-screen flex-col items-center justify-between p-8"
+      className="flex min-h-screen flex-col items-center justify-between p-8 text-gray-900"
       style={{
         backgroundImage: "url('/dna-background.svg')",
         backgroundSize: "cover",
@@ -18,11 +18,11 @@ export default function Home() {
     >
       {/* Main */}
       <main className="flex flex-col items-center justify-center flex-1 text-center p-8 max-w-5xl w-full">
-        <h1 className="text-4xl font-bold mb-4">
+        <h1 className="text-4xl font-bold mb-4 text-gray-900">
           Bioinformatics & Clinical Metagenomics Analysis
         </h1>
 
-        <p className="text-lg max-w-2xl mb-6">
+        <p className="text-lg max-w-2xl mb-6 text-gray-900/90">
           An innovative platform by Dr. Elmira Davasaz T. integrating microbiome
           analysis, mobile genetic elements, and novel bacterial species discovery
           to advance chronic disease research and personalized therapeutic strategies.
