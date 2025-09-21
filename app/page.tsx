@@ -10,17 +10,18 @@ export default function Home() {
     <div
       className="flex min-h-screen flex-col items-center justify-between p-8"
       style={{
-        backgroundImage: "url('/dna-background.svg')", // public/ içine koyun
+        backgroundImage: "url('/dna-background.svg')", // public/ içine koyulu
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
       }}
     >
       {/* Main */}
-      <main className="flex flex-col items-center justify-center flex-1 text-center bg-wight/80 rounded-xl p-8 shadow-lg max-w-5xl w-full">
+      <main className="flex flex-col items-center justify-center flex-1 text-center p-8 max-w-5xl w-full">
         <h1 className="text-4xl font-bold mb-4">
           Bioinformatics & Clinical Metagenomics Analysis
         </h1>
+
         <p className="text-lg max-w-2xl mb-6">
           An innovative platform by Dr. Elmira Davasaz T. integrating microbiome
           analysis, mobile genetic elements, and novel bacterial species discovery
@@ -50,9 +51,7 @@ export default function Home() {
         {showContact && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div className="bg-white p-6 rounded-xl shadow-lg max-w-sm w-full text-center">
-              <h2 className="text-xl font-semibold mb-4 text-gray-800">
-                Contact Us
-              </h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">Contact Us</h2>
               <div className="flex flex-col gap-3">
                 <a href="mailto:elmira.dt@gmail.com" className="text-blue-600 underline">
                   📧 elmira.dt@gmail.com
@@ -71,60 +70,44 @@ export default function Home() {
           </div>
         )}
 
-        {/* Article Editing — NOT */}
-        <div className="mt-6 text-gray-800 text-lg font-semibold leading-relaxed max-w-3xl">
-          Not: Professional article editing and consultancy for submissions to
-          high-impact Q1–Q2 journals in biology field, with specialization in
-          <span className="font-bold"> bioinformatics, microbiome,</span> and
+        {/* NOT / Article Editing */}
+        <div className="mt-6 text-gray-800 text-xl font-semibold leading-relaxed max-w-3xl">
+          Professional article editing and consultancy for submissions to high-impact
+          Q1–Q2 journals in biology, with specialization in <span className="font-bold">bioinformatics</span>,
+          <span className="font-bold"> microbiome</span>, and
           <span className="font-bold"> clinical metagenomics</span>.
         </div>
 
-       
         {/* Gallery — 3 görsel aynı hizada */}
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10 mt-6">
+          <figure className="text-center">
+            <Image
+              src="/bioinfo.jpg"
+              alt="Clinical metagenomics in chronic disease research."
+              width={380}
+              height={285}
+              className="rounded-lg shadow-md mx-auto"
+              priority
+            />
+            <figcaption className="mt-2 text-sm text-gray-700">
+              Clinical metagenomics in chronic disease research.
+            </figcaption>
+          </figure>
 
-  <figure className="text-center">
-    <Image
-      src="/bioinfo.jpg"
-      alt="Clinical metagenomics in chronic disease research."
-      width={380}
-      height={285}
-      className="rounded-lg shadow-md mx-auto"
-      priority
-    />
-    <figcaption className="mt-2 text-sm text-gray-700">
-      Clinical metagenomics in chronic disease research.
-    </figcaption>
-  </figure>
+          <figure className="text-center">
+            <Image
+              src="/microbiome.jpg"
+              alt="Microbiome network visualization"
+              width={380}
+              height={285}
+              className="rounded-lg shadow-md mx-auto"
+            />
+            <figcaption className="mt-2 text-sm text-gray-700">
+              Microbiome diversity and network analysis
+            </figcaption>
+          </figure>
 
-  <figure className="text-center">
-    <Image
-      src="/microbiome.jpg"
-      alt="Microbiome network visualization"
-      width={380}
-      height={285}
-      className="rounded-lg shadow-md mx-auto"
-    />
-    <figcaption className="mt-2 text-sm text-gray-700">
-      Microbiome diversity and network analysis
-    </figcaption>
-  </figure>
-
-  <figure className="text-center">
-    <Image
-      src="/antibiotic.jpg"
-      alt="Antibiotic resistance illustration"
-      width={380}
-      height={285}
-      className="rounded-lg shadow-md mx-auto"
-    />
-    <figcaption className="mt-2 text-sm text-gray-700">
-      Antibiotic resistance and clinical impact
-    </figcaption>
-  </figure>
-
-</div>
-          <div>
+          <figure className="text-center">
             <Image
               src="/antibiotic.jpg"
               alt="Antibiotic resistance illustration"
@@ -132,13 +115,13 @@ export default function Home() {
               height={285}
               className="rounded-lg shadow-md mx-auto"
             />
-            <p className="mt-2 text-sm text-gray-700 text-center">
+            <figcaption className="mt-2 text-sm text-gray-700">
               Antibiotic resistance and clinical impact
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </div>
 
-        {/* Publication image with DOI */}
+        {/* Publication image with DOI (4. görsel altta kalsın) */}
         <div className="mb-8">
           <Image
             src="/publication.jpg"
@@ -161,7 +144,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="row-start-3 flex flex-col items-center justify-center mt-8 gap-2 text-white drop-shadow">
+      <footer className="row-start-3 flex flex-col items-center justify-center mt-8 gap-2">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://drelmira-bioinformatic.com"
@@ -171,24 +154,15 @@ export default function Home() {
           <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
           Bioinformatics & Clinical Metagenomics by Dr. Elmira Davasaz T. →
         </a>
-
-        <div className="flex flex-col items-center mt-2 text-sm">
+        <div className="flex flex-col items-center mt-2 text-sm text-gray-700">
           <p>
-            Email:{" "}
-            <a href="mailto:elmira.dt@gmail.com" className="underline">
-              elmira.dt@gmail.com
-            </a>
+            Email: <a href="mailto:elmira.dt@gmail.com" className="underline">elmira.dt@gmail.com</a>
           </p>
           <p>
-            Phone:{" "}
-            <a href="tel:+905342699127" className="underline">
-              +90 534 269 91 27
-            </a>
+            Phone: <a href="tel:+905342699127" className="underline">+90 534 269 91 27</a>
           </p>
         </div>
       </footer>
     </div>
   );
 }
-
-
