@@ -10,7 +10,7 @@ export default function Home() {
     <div
       className="flex min-h-screen flex-col items-center justify-between p-8"
       style={{
-        backgroundImage: "url('/dna-background.svg')", // public/ içine koyulu
+        backgroundImage: "url('/dna-background.svg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -73,20 +73,22 @@ export default function Home() {
         {/* NOT / Article Editing */}
         <div className="mt-6 text-gray-800 text-xl font-semibold leading-relaxed max-w-3xl">
           Professional article editing and consultancy for submissions to high-impact
-          Q1–Q2 journals in biology, with specialization in <span className="font-bold">bioinformatics</span>,
+          Q1–Q2 journals in biology, with specialization in
+          <span className="font-bold"> bioinformatics</span>,
           <span className="font-bold"> microbiome</span>, and
           <span className="font-bold"> clinical metagenomics</span>.
         </div>
 
-        {/* Gallery — 3 görsel aynı hizada */}
+        {/* Gallery — 3 görsel aynı hizada + hafif hareket + hover zoom */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10 mt-6">
-          <figure className="text-center">
+          <figure className="group text-center float-slow will-change-transform">
             <Image
               src="/bioinfo.jpg"
               alt="Clinical metagenomics in chronic disease research."
               width={380}
               height={285}
-              className="rounded-lg shadow-md mx-auto"
+              sizes="(min-width: 768px) 380px, 100vw"
+              className="rounded-lg shadow-md mx-auto transition-transform duration-500 group-hover:scale-[1.03]"
               priority
             />
             <figcaption className="mt-2 text-sm text-gray-700">
@@ -94,26 +96,28 @@ export default function Home() {
             </figcaption>
           </figure>
 
-          <figure className="text-center">
+          <figure className="group text-center float-slow-2 will-change-transform">
             <Image
               src="/microbiome.jpg"
               alt="Microbiome network visualization"
               width={380}
               height={285}
-              className="rounded-lg shadow-md mx-auto"
+              sizes="(min-width: 768px) 380px, 100vw"
+              className="rounded-lg shadow-md mx-auto transition-transform duration-500 group-hover:scale-[1.03]"
             />
             <figcaption className="mt-2 text-sm text-gray-700">
               Microbiome diversity and network analysis
             </figcaption>
           </figure>
 
-          <figure className="text-center">
+          <figure className="group text-center float-slow-3 will-change-transform">
             <Image
               src="/antibiotic.jpg"
               alt="Antibiotic resistance illustration"
               width={380}
               height={285}
-              className="rounded-lg shadow-md mx-auto"
+              sizes="(min-width: 768px) 380px, 100vw"
+              className="rounded-lg shadow-md mx-auto transition-transform duration-500 group-hover:scale-[1.03]"
             />
             <figcaption className="mt-2 text-sm text-gray-700">
               Antibiotic resistance and clinical impact
@@ -128,6 +132,7 @@ export default function Home() {
             alt="Publication: Bioinformatic Strategies in Metagenomics of Chronic Prostatitis"
             width={600}
             height={400}
+            sizes="(min-width: 768px) 600px, 100vw"
             className="rounded-lg shadow-md mx-auto"
           />
           <p className="mt-2 text-[12px] text-gray-700 italic">
@@ -156,10 +161,16 @@ export default function Home() {
         </a>
         <div className="flex flex-col items-center mt-2 text-sm text-gray-700">
           <p>
-            Email: <a href="mailto:elmira.dt@gmail.com" className="underline">elmira.dt@gmail.com</a>
+            Email:{" "}
+            <a href="mailto:elmira.dt@gmail.com" className="underline">
+              elmira.dt@gmail.com
+            </a>
           </p>
           <p>
-            Phone: <a href="tel:+905342699127" className="underline">+90 534 269 91 27</a>
+            Phone:{" "}
+            <a href="tel:+905342699127" className="underline">
+              +90 534 269 91 27
+            </a>
           </p>
         </div>
       </footer>
