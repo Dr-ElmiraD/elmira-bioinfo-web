@@ -79,36 +79,51 @@ export default function Home() {
           <span className="font-bold"> clinical metagenomics</span>.
         </div>
 
-        {/* Bioinformatics image (smaller) */}
-        <div className="mb-8 mt-6">
-          <Image
-            src="/bioinfo.jpg"
-            alt="Bioinformatics & Clinical Metagenomics"
-            width={300}   // küçültüldü
-            height={280}
-            className="rounded-lg shadow-md"
-            priority
-          />
-          <p className="mt-2 text-sm text-gray-700">
-            Clinical metagenomics in chronic disease research.
-          </p>
-        </div>
+       
+        {/* Gallery — 3 görsel aynı hizada */}
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
 
-        {/* Two smaller images side by side */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-          <div>
-            <Image
-              src="/microbiome.jpg"
-              alt="Microbiome network visualization"
-              width={380}
-              height={285}
-              className="rounded-lg shadow-md mx-auto"
-            />
-            <p className="mt-2 text-sm text-gray-700 text-center">
-              Microbiome diversity and network analysis
-            </p>
-          </div>
+  <figure className="text-center">
+    <Image
+      src="/bioinfo.jpg"
+      alt="Clinical metagenomics in chronic disease research."
+      width={380}
+      height={285}
+      className="rounded-lg shadow-md mx-auto"
+      priority
+    />
+    <figcaption className="mt-2 text-sm text-gray-700">
+      Clinical metagenomics in chronic disease research.
+    </figcaption>
+  </figure>
 
+  <figure className="text-center">
+    <Image
+      src="/microbiome.jpg"
+      alt="Microbiome network visualization"
+      width={380}
+      height={285}
+      className="rounded-lg shadow-md mx-auto"
+    />
+    <figcaption className="mt-2 text-sm text-gray-700">
+      Microbiome diversity and network analysis
+    </figcaption>
+  </figure>
+
+  <figure className="text-center">
+    <Image
+      src="/antibiotic.jpg"
+      alt="Antibiotic resistance illustration"
+      width={380}
+      height={285}
+      className="rounded-lg shadow-md mx-auto"
+    />
+    <figcaption className="mt-2 text-sm text-gray-700">
+      Antibiotic resistance and clinical impact
+    </figcaption>
+  </figure>
+
+</div>
           <div>
             <Image
               src="/antibiotic.jpg"
