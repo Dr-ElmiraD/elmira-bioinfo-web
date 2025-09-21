@@ -10,14 +10,14 @@ export default function Home() {
     <div
       className="flex min-h-screen flex-col items-center justify-between p-8"
       style={{
-        backgroundImage: "url('/dna-background.jpg')", // public/ içine koyun
+        backgroundImage: "url('/dna-background.svg')", // public/ içine koyun
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
       }}
     >
       {/* Main */}
-      <main className="flex flex-col items-center justify-center flex-1 text-center bg-white/80 rounded-xl p-8 shadow-lg max-w-5xl w-full">
+      <main className="flex flex-col items-center justify-center flex-1 text-center bg-black/80 rounded-xl p-8 shadow-lg max-w-5xl w-full">
         <h1 className="text-4xl font-bold mb-4">
           Bioinformatics & Clinical Metagenomics Analysis
         </h1>
@@ -73,8 +73,8 @@ export default function Home() {
 
         {/* Article Editing — NOT */}
         <div className="mt-6 text-gray-800 text-lg font-semibold leading-relaxed max-w-3xl">
-          Professional article editing and consultancy for submissions to
-          high-impact Q1–Q2 journals in biology, with specialization in
+          Not: Professional article editing and consultancy for submissions to
+          high-impact Q1–Q2 journals in biology field, with specialization in
           <span className="font-bold"> bioinformatics, microbiome,</span> and
           <span className="font-bold"> clinical metagenomics</span>.
         </div>
@@ -85,7 +85,7 @@ export default function Home() {
             src="/bioinfo.jpg"
             alt="Bioinformatics & Clinical Metagenomics"
             width={450}   // küçültüldü
-            height={100}
+            height={280}
             className="rounded-lg shadow-md"
             priority
           />
