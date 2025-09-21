@@ -17,7 +17,7 @@ export default function Home() {
       }}
     >
       {/* Main */}
-      <main className="flex flex-col items-center justify-center flex-1 text-center bg-black/80 rounded-xl p-8 shadow-lg max-w-5xl w-full">
+      <main className="flex flex-col items-center justify-center flex-1 text-center bg-wight/80 rounded-xl p-8 shadow-lg max-w-5xl w-full">
         <h1 className="text-4xl font-bold mb-4">
           Bioinformatics & Clinical Metagenomics Analysis
         </h1>
