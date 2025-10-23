@@ -28,6 +28,51 @@ export default function Home() {
           to advance chronic disease research and personalized therapeutic strategies.
         </p>
 
+        {/* === Proteomic Analyzes (Modern Card Style) === */}
+        <section className="mt-2 mb-12 w-full max-w-5xl">
+          <div className="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-8">
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
+              Proteomic Analyzes
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Text */}
+              <div className="text-left">
+                <p className="text-gray-800 text-lg leading-relaxed mb-4">
+                  Advanced <span className="font-semibold">proteomics solutions</span> including
+                  <span className="italic"> mass spectrometry–based analysis</span>, protein quantification,
+                  biomarker discovery, and pathway enrichment. We integrate proteomic data with
+                  metagenomic insights to deliver <span className="font-semibold">multi-omics interpretation</span>
+                  for clinical and biological research projects.
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <li>LC-MS/MS data processing and QC</li>
+                  <li>Quantitative proteomics & biomarker discovery</li>
+                  <li>GO/KEGG/Reactome enrichment & network mapping</li>
+                  <li>Integration with metagenomics for multi-omics studies</li>
+                </ul>
+
+                <div className="mt-5">
+                  <a href="/enrichment" className="underline text-blue-600">
+                    See all enrichment figures →
+                  </a>
+                </div>
+              </div>
+
+              {/* Image (uses the file you already deployed) */}
+              <div className="flex justify-center">
+                <Image
+                  src="/images/enrichment/example.png"
+                  alt="Proteomic enrichment network figure"
+                  width={520}
+                  height={360}
+                  className="rounded-xl shadow-md hover:scale-[1.03] transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Actions */}
         <div className="flex gap-4 mb-8">
           <button
@@ -79,7 +124,7 @@ export default function Home() {
           <span className="font-bold"> clinical metagenomics</span>.
         </div>
 
-        {/* Gallery — 3 görsel aynı hizada + hafif hareket + hover zoom */}
+        {/* Gallery */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10 mt-6">
           <figure className="group text-center float-slow will-change-transform">
             <Image
@@ -125,7 +170,7 @@ export default function Home() {
           </figure>
         </div>
 
-        {/* Publication image with DOI (4. görsel altta kalsın) */}
+        {/* Publication image with DOI */}
         <div className="mb-8">
           <Image
             src="/publication.jpg"
