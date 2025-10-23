@@ -1,28 +1,33 @@
-export default function EnrichmentPage() {
+// app/page.tsx
+export default function Home() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-8">
-      {/* Page Title */}
-      <h1 className="text-2xl font-bold mb-4">Enrichment Network Analysis</h1>
+      <h1 className="text-3xl font-bold">Welcome to drelmira-bioinformatic</h1>
+      <p className="text-gray-600 mt-2">
+        Bioinformatics • Proteomics • Enrichment analysis and reproducible science.
+      </p>
 
-      {/* Section: Proteomic Analyzes */}
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-3">Proteomic Analyzes</h2>
-        <p className="text-gray-600 mb-4">
-          This section demonstrates enrichment results for proteomic datasets. 
-          Nodes represent enriched biological terms, and edges represent overlaps 
-          between these terms.
+      <section id="proteomic" className="mt-12">
+        <h2 className="text-2xl font-bold mb-4">Proteomic Analyzes</h2>
+        <p className="text-gray-600 mb-6">
+          The figure below illustrates an enrichment network for proteomic datasets.
+          Nodes represent enriched terms; edges represent Jaccard overlap between terms.
         </p>
 
-        <figure className="flex flex-col items-center">
+        <figure>
           <img
             src="/images/enrichment/example.png"
             alt="Proteomic enrichment network figure"
-            className="rounded-xl border shadow max-w-2xl"
+            className="rounded-xl border shadow mx-auto"
           />
-          <figcaption className="text-sm text-gray-500 mt-2">
-            Figure 1. Example proteomic enrichment network.
+          <figcaption className="text-sm text-gray-500 mt-2 text-center">
+            Figure 1. Example proteomic enrichment network (node size ∝ hits; edge = Jaccard ≥ 0.20).
           </figcaption>
         </figure>
+
+        <div className="mt-6 text-center">
+          <a className="underline" href="/enrichment">See all enrichment figures →</a>
+        </div>
       </section>
     </main>
   );
