@@ -62,8 +62,8 @@ export default function Home() {
               {/* Image (uses the file you already deployed) */}
               <div className="flex justify-center">
                 <Image
-                  src="/images/enrichment/example.png"
-                  alt="Proteomic enrichment network figure"
+                  src="/images/enrichment/enrichment_biomarkers_1.png"
+                  alt="Biomarker enrichment network (set 1)"
                   width={520}
                   height={360}
                   className="rounded-xl shadow-md hover:scale-[1.03] transition-transform duration-500"
