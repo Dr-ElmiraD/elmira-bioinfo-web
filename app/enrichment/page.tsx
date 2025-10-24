@@ -1,34 +1,51 @@
 // app/page.tsx
-export default function Home() {
+export default function EnrichmentPage() {
   return (
-    <main className="max-w-6xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold">Welcome to drelmira-bioinformatic</h1>
-      <p className="text-gray-600 mt-2">
-        Bioinformatics • Proteomics • Enrichment analysis and reproducible science.
+    <main className="max-w-6xl mx-auto px-4 py-10">
+      <h1 className="text-3xl font-bold mb-6">Enrichment Network Analysis</h1>
+      <p className="text-gray-600 mb-8">
+        Nodes represent <strong>biomarkers</strong>; edges indicate pairwise overlap (Jaccard-like).
+        These example networks are generic and can be adapted to any project or disease.
       </p>
 
-      <section id="proteomic" className="mt-12">
-        <h2 className="text-2xl font-bold mb-4">Proteomic Analyzes</h2>
-        <p className="text-gray-600 mb-6">
-          The figure below illustrates an enrichment network for proteomic datasets.
-          Nodes represent enriched terms; edges represent Jaccard overlap between terms.
-        </p>
-
+      <div className="space-y-10">
+        {/* Existing example */}
         <figure>
           <img
             src="/images/enrichment/example.png"
-            alt="Proteomic enrichment network figure"
-            className="rounded-xl border shadow mx-auto"
+            alt="Enrichment network (example)"
+            className="rounded-xl border shadow w-full"
           />
           <figcaption className="text-sm text-gray-500 mt-2 text-center">
-            Figure 1. Example proteomic enrichment network (node size ∝ hits; edge = Jaccard ≥ 0.20).
+            Example enrichment network.
           </figcaption>
         </figure>
 
-        <div className="mt-6 text-center">
-          <a className="underline" href="/enrichment">See all enrichment figures →</a>
-        </div>
-      </section>
+        {/* New: Biomarkers set 1 */}
+        <figure>
+          <img
+            src="/images/enrichment/enrichment_biomarkers_1.png"
+            alt="Biomarker enrichment network (set 1)"
+            className="rounded-xl border shadow w-full"
+          />
+          <figcaption className="text-sm text-gray-500 mt-2 text-center">
+            Biomarkers set 1 (e.g., ALB, APOA1, APOB, APOE, CD63, CD9, CD81…).
+          </figcaption>
+        </figure>
+
+        {/* New: Biomarkers set 2 */}
+        <figure>
+          <img
+            src="/images/enrichment/enrichment_biomarkers_2.png"
+            alt="Biomarker enrichment network (set 2)"
+            className="rounded-xl border shadow w-full"
+          />
+          <figcaption className="text-sm text-gray-500 mt-2 text-center">
+            Biomarkers set 2 (e.g., CRP, IL6, TNF, MMP9, S100A8/A9, TLR4…).
+          </figcaption>
+        </figure>
+      </div>
     </main>
   );
 }
+
