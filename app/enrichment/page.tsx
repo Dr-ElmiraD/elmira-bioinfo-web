@@ -17,19 +17,19 @@ export default function EnrichmentPage() {
             className="rounded-xl border shadow w-full"
           />
           <figcaption className="text-sm text-gray-500 mt-2 text-center">
-            Example enrichment network.
+            Biomarkers set 1 (e.g., ALB, APOA1, APOB, APOE, CD63, CD9, CD81…).
           </figcaption>
         </figure>
 
         {/* New: Biomarkers set 1 */}
         <figure>
           <img
-            src="/images/enrichment/enrichment_biomarkers_1.png"
+            src="/images/enrichment/example.png"
             alt="Biomarker enrichment network (set 1)"
             className="rounded-xl border shadow w-full"
           />
           <figcaption className="text-sm text-gray-500 mt-2 text-center">
-            Biomarkers set 1 (e.g., ALB, APOA1, APOB, APOE, CD63, CD9, CD81…).
+             Example enrichment network.
           </figcaption>
         </figure>
 
