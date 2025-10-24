@@ -32,7 +32,7 @@ export default function Home() {
         <section className="mt-2 mb-12 w-full max-w-5xl">
           <div className="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-8">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
-              Proteomic Analyzes
+              Proteomic Analyses
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
