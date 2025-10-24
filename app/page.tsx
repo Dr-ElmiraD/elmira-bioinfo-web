@@ -28,7 +28,7 @@ export default function Home() {
           to advance chronic disease research and personalized therapeutic strategies.
         </p>
 
-        {/* === Proteomic Analyzes (Modern Card Style) === */}
+        {/* === Proteomic Analyses (Modern Card Style) === */}
         <section className="mt-2 mb-12 w-full max-w-5xl">
           <div className="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-8">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
@@ -43,7 +43,7 @@ export default function Home() {
                   <span className="italic"> mass spectrometry–based analysis</span>, protein quantification,
                   biomarker discovery, and pathway enrichment. We integrate proteomic data with
                   metagenomic insights to deliver <span className="font-semibold">multi-omics interpretation</span>
-                  for clinical and biological research projects.
+                   for clinical and biological research projects.
                 </p>
                 <ul className="list-disc list-inside text-gray-700 space-y-2">
                   <li>LC-MS/MS data processing and QC</li>
