@@ -1,4 +1,5 @@
 // app/page.tsx
+// app/enrichment/page.tsx
 export default function EnrichmentPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
@@ -48,4 +49,3 @@ export default function EnrichmentPage() {
     </main>
   );
 }
-
