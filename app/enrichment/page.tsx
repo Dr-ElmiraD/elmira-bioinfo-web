@@ -12,7 +12,7 @@ export default function EnrichmentPage() {
         {/* Existing example */}
         <figure>
           <img
-            src="/images/enrichment/example.png"
+            src="/images/enrichment/enrichment_biomarkers_1.png"
             alt="Enrichment network (example)"
             className="rounded-xl border shadow w-full"
           />
