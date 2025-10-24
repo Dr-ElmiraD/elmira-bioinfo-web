@@ -1,4 +1,3 @@
-// app/page.tsx
 // app/enrichment/page.tsx
 export default function EnrichmentPage() {
   return (
